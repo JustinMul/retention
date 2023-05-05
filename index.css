@@ -5,6 +5,7 @@ body{
   display: flex;
   align-items: row;
 }
+
 nav{
   position: fixed;
   top: 0;
@@ -87,152 +88,25 @@ nav{
   height: 72px;
 }
 
-
-
-
-
 /* main body */
 
 main{
+margin-left: 316px;
+background-color:#ECE7E1 ;
+width: 100%;
+height: 100vh;
+}
+
+.topRow{
+  display: flex;
+  justify-content: space-between;
   
-  width: 1398px;
-  height: 1170px;
-  left: 319px;
-  top: 0px;
-  background: #ECE7E1;
 }
-
-.overview{
-
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%;
-
-font-family: 'MADE Soulmaze';
-font-style: normal;
-font-weight: 400;
-font-size: 28.14px;
-line-height: 25px;
-/* identical to box height, or 88% */
-
-text-transform: capitalize;
-
-/* Black */
-
-color: #131313;
+.flexRow{
+  display: flex;
+  flex-direction: row;
 }
-
-.scriptStatus{
-
-width: 316px;
-height: 42.21px;
-left: 1127px;
-top: 38px;
-display: flex;
-flex-direction: row;
-
-}
-.scriptText{
-
-left: 0%;
-right: 54.43%;
-top: 30.8%;
-bottom: 24.2%;
-
-font-family: 'Commuters Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 20px;
-text-transform: uppercase;
-
-/* Black */
-
-color: #131313;
-}
-
-.outerContainer{
-
-left: 50%;
-right: 0%;
-top: 0%;
-bottom: 0%;
-
-background: #FFFFFF;
-box-shadow: 4.08479px 0px 30.636px rgba(112, 144, 176, 0.15);
-}
-
 .rectangle189{
-
-
-left: 73.66%;
-right: 0.76%;
-top: 5.71%;
-bottom: 5.71%;
-
-/* Neon */
-
-background: #D3FE8A;
-
-}
-.on{
-
-  left: 79.31%;
-  right: 11.83%;
-  top: 27.02%;
-  bottom: 25.6%;
-  
-  font-family: 'Commuters Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16.3392px;
-  line-height: 20px;
-  text-transform: capitalize;
-  
-  /* Black */
-  
-  color: #131313;
-  
+  background-color: #D3FE8A;
 }
 
-.off{
-
-left: 56.75%;
-right: 31.23%;
-top: 27.02%;
-bottom: 25.61%;
-
-font-family: 'Commuters Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 16.3392px;
-line-height: 20px;
-text-transform: capitalize;
-
-/* Black */
-
-color: #131313;
-
-}
-.checkMarkIcon{
-
-left: 90.25%;
-right: 5.62%;
-top: 38.49%;
-bottom: 40.91%;
-
-/* Black */
-
-border: 1.86301px solid #131313;
-}
-
-
-
-.emailButton{
-
-  width: 186px;
-  height: 51px;
-  left: 1484px;
-  top: 33px;
-}
