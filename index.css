@@ -91,22 +91,88 @@ nav{
 /* main body */
 
 main{
+
 margin-left: 316px;
 background-color:#ECE7E1 ;
 width: 100%;
 height: 100vh;
 }
 
-.topRow{
+.outerMargin{
+  margin: 41px;
+}
+
+.spacedRow{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   
 }
 .flexRow{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  
+}
+
+.flexCol{
+  display: flex;
+  flex-direction: column;
 }
 .rectangle189{
   background-color: #D3FE8A;
+  
 }
 
+#offOn{
+  background-color: #FFFFFF;
+}
+
+.baseMargin{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.on{
+  padding:2px;
+}
+
+.dateDropDown{
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
+  
+}
+
+.smallGraph{
+  max-width: 320px;
+}
+
+.chartBackground{
+  display: flex;
+  flex-direction: column;
+  background-color:  #FFFFFF;;
+  border: 0.5px solid black;  
+  margin: 2px;
+}
+
+.greenDollar{
+  background-color:#D3FE8A ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+.moneyPercent{
+  display: flex;
+  justify-content: space-between;
+}
+.innerChartMargin{
+  margin: 10px;
+}
+
+#greenText{
+ 
+  color: #008F46;
+}
