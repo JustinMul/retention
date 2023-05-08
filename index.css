@@ -1,17 +1,21 @@
 
-/* nav Bar css  */
-
 body{
+  float: none !important; 
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   align-items: row;
+  
 }
+
+/* nav Bar css  */
 
 nav{
   position: fixed;
   top: 0;
   left: 0;
   width: 316px; /* set the width of your sidebar */
-  height: 100vh; 
+  height: 100%; 
 }
 
 .rectangle{
@@ -62,18 +66,22 @@ nav{
   margin-right: 1rem;
 }
 .admin{
-
-  margin: aut;
   font-family: 'Commuters Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 19.8747px;
   line-height: 25px;
-
-
   background-color: transparent;
   border: none;
+  color: #FFFFFF;
+}
 
+.trends{
+  font-family: 'FONTSPRING DEMO - Commuters Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19.8747px;
+  line-height: 25px;
   color: #FFFFFF;
 }
 
@@ -88,14 +96,24 @@ nav{
   height: 72px;
 }
 
+.myAccountText{
+  font-family: 'Commuters Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+
 /* main body */
 
 main{
-
 margin-left: 316px;
 background-color:#ECE7E1 ;
 width: 100%;
-height: 100vh;
+height: 100%;
 }
 
 .outerMargin{
@@ -106,46 +124,111 @@ height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
+
+@media screen and (max-width: 768px) {
+  .spacedRow{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
 .flexRow{
   display: flex;
   flex-direction: row;
   align-items: center;
-  
 }
 
+.flexRowMargin{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left:10px
+}
 .flexCol{
   display: flex;
   flex-direction: column;
 }
+
+#overView{
+  font-family: 'MADE Soulmaze';
+  font-weight: 800;
+  font-size: 28.14px
+}
+
+#scriptStatus{
+  font-family: 'Commuters Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+#topbar{
+  margin-left: 10px;
+}
 .rectangle189{
   background-color: #D3FE8A;
-  
+  scale: 90%;
+  display: flex;
+  align-items: center;
 }
 
 #offOn{
   background-color: #FFFFFF;
+  padding: 1px;
 }
 
 .baseMargin{
   margin-left: 5px;
   margin-right: 5px;
 }
-.on{
-  padding:2px;
+
+#on{
+  padding:4px;
+  font-family: 'Commuters Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+#calendarImg{
+  max-width: 40%;
+  height: auto;
+
+}
+
+#email{
+  font-family: 'Commuters Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 13px;
 }
 
 .dateDropDown{
   display: flex;
   justify-content: flex-end;
-  gap: 15px;
+  gap: 15px; 
   align-items: center;
-  
+
+}
+.dateBackground{
+  background-color:  #FFFFFF;
+  border: 0.5px solid black;  
+  padding: 5px;
+  margin-top: 5px;
 }
 
 .smallGraph{
-  max-width: 320px;
+  max-width: 100%;
+  height: auto;
 }
 
 .chartBackground{
@@ -153,7 +236,21 @@ height: 100vh;
   flex-direction: column;
   background-color:  #FFFFFF;;
   border: 0.5px solid black;  
-  margin: 2px;
+  margin-bottom: 20px;
+}
+
+.flexRowChart{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+@media screen and (max-width: 768px) {
+  .flexRowChart{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+  }
 }
 
 .greenDollar{
@@ -162,6 +259,18 @@ height: 100vh;
   align-items: center;
   justify-content: center;
   margin: 5px;
+  padding: 5px;
+}
+
+#greenBig{
+  background-color: #D3FE8A;
+  padding: 5px;
+  font-family: 'Commuters Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+
 }
 
 .moneyPercent{
@@ -173,6 +282,99 @@ height: 100vh;
 }
 
 #greenText{
- 
+
   color: #008F46;
+}
+
+.reclaimLine{
+  max-width: 80%;
+  height: auto;
+
+}
+
+.flexRowGap{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#dateDrop{
+  font-family: 'Commuters Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19.1489px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+#marginBottom{
+  margin-bottom: 20px;
+}
+
+#graphTitle{
+  font-family: 'Commuters Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  color: #131313;
+}
+
+#graphNum{
+  font-family: 'Commuters Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+#graphDate{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12.0748px;
+  line-height: 13px;
+}
+
+#subheadingTitle{
+  font-family: 'Commuters Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+
+  text-transform: capitalize;
+}
+
+#viewFlow{
+  background-color:  #FFFFFF;;
+  border: 0.5px solid black;  
+  padding: 10px;
+  flex-grow: 1;
+ 
+}
+
+.scaleImg{
+  max-width: 100%;
+  height: auto;
+}
+
+.flexEnd{
+  justify-content: flex-end;
+}
+
+.reclaimAlign{
+  display: flex;
+  gap:10px;
+  align-items: center;
+}
+
+.cartMargin{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#gapMargin{
+  gap: 10px;
 }

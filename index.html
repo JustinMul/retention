@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
-   
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -35,7 +35,7 @@
             <div class="buttonContainer">
               <div class="leftIcon">
               </div>
-              <span class="admin">TRENDS</span>
+              <span class="trends">TRENDS</span>
             </div>
 
             <div class="buttonContainer">
@@ -66,19 +66,19 @@
             <div class="buttonContainer">
               <div class="leftIcon">
               </div>
-              <span class="admin">INTEGRATIONS</span>
+              <span class="trends">INTEGRATIONS</span>
             </div>
 
             <div class="buttonContainer">
               <div class="leftIcon">
               </div>
-              <span class="admin">CONTACTS</span>
+              <span class="trends">CONTACTS</span>
             </div>
 
             <div class="buttonContainer">
               <div class="leftIcon">
               </div>
-              <span class="admin">ORDERS</span>
+              <span class="trends">ORDERS</span>
             </div>
 
             <div class="buttonContainer">
@@ -93,7 +93,7 @@
             <div class="buttonContainer">
               <div class="leftIcon">
               </div>
-              <span class="admin">EVENT DETAILS</span>
+              <span class="trends">EVENT DETAILS</span>
             </div>
 
             <div class="buttonContainer">
@@ -108,7 +108,7 @@
             <div class="buttonContainer">
               <div class="leftIcon">
               </div>
-              <span class="admin">UPLOAD DATA</span>
+              <span class="trends">UPLOAD DATA</span>
              
             </div>
 
@@ -133,7 +133,7 @@
           
           </div>
           <div class="myAccount">
-            MY ACCOUNT 
+            <span class="myAccountText">MY ACCOUNT </span>
           </div>
         </div>
       </nav>
@@ -142,54 +142,58 @@
         <div class="outerMargin">
           
           <div class="spacedRow">
-            <span >OVERVIEW</span>
+            <span id="overView">OVERVIEW</span>
 
             <div class="flexRow">
 
-              <div class="flexRow">
-                <span>SCRIPT STATUS</span>
-
-                <div class="flexRow" id="offOn">
-                  <span class="baseMargin">OFF</span>
+              <div class="flexRowMargin" id="topBar" >
+                <span id="scriptStatus">SCRIPT STATUS</span>
+                <div class="flexRowMargin" id="offOn">
+                  <span class="baseMargin" id="scriptStatus">OFF</span>
                   <div id="offOn">
                     <div class="rectangle189">
                       <span class="baseMargin" id="on">ON</span>
-                      <img src="./imgs/checkmarkVector.svg" class="checkmarkVector">
+                      <img src="./imgs/checkmarkVector.svg">
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
 
-              <div class="flexRow">
-                <p>Email Report</p>
-                <img src="./imgs/mailIcon.png">
+              <div class="flexRowMargin">
+                <span class="flexRowMargin" id="email">Email Report</span>
+                <img src="./imgs/mailIcon.png" id="calendarImg" class="flexRowMargin">
               </div>
             
             </div>
           </div> 
 
-
+          
           <div class="dateDropDown">
-            <img src="./imgs/calendar.svg">
-            <span>February 16-February 22</span>
-            <img src="./imgs/VectorDownActive.svg">
+            <div class="dateBackground">
+              <img src="./imgs/calendar.svg">
+              <span id="dateDrop">February 16-February 22</span>
+              <img src="./imgs/VectorDownActive.svg">
+            </div>
           </div>
+          
 
-          <div class="flexRow">
+          <div class="flexRowChart" id="gapMargin">
 
             <div class="chartBackground" >
               <div class="innerChartMargin">
                 <div>
-                  <span>Reclaim Revenue</span>
+                  <span id="graphTitle">Reclaim Revenue</span>
 
                   <div class="moneyPercent" >
-                    <span class="greenDollar">$12,100</span>
+                    <div>
+                      <span class="greenDollar" id="graphNum">$12,100</span>
+                    </div>
                     <div class="flexCol" >
                       <div class="dateDropDown" >
-                        <img src="./imgs/percentArrowUp.svg">
+                        <img src="./imgs/percentArrowUp.svg" >
                         <span id="greenText">50%</span>
                       </div>
-                      <span class="dateDropDown">vs. Feb 9-Feb 16</span>
+                      <span class="dateDropDown" id="graphDate">vs. Feb 9-Feb 16</span>
                     </div>
                   </div>
                 </div>
@@ -200,16 +204,16 @@
             <div class="chartBackground" >
               <div class="innerChartMargin">
                 <div>
-                  <span>Reclaim Revenue</span>
+                  <span id="graphTitle" >Resolve Revenue</span>
 
                   <div class="moneyPercent" >
-                    <span class="greenDollar">$12,100</span>
+                    <span class="greenDollar" id="graphNum">$6,500</span>
                     <div class="flexCol" >
                       <div class="dateDropDown" >
                         <img src="./imgs/percentArrowUp.svg">
                         <span id="greenText">50%</span>
                       </div>
-                      <span class="dateDropDown">vs. Feb 9-Feb 16</span>
+                      <span class="dateDropDown" id="graphDate">vs. Feb 9-Feb 16</span>
                     </div>
                   </div>
                 </div>
@@ -220,16 +224,16 @@
             <div class="chartBackground" >
               <div class="innerChartMargin">
                 <div>
-                  <span>Reclaim Revenue</span>
+                  <span id="graphTitle">Contacts Acquired</span>
 
                   <div class="moneyPercent" >
-                    <span class="greenDollar">$12,100</span>
+                    <span class="greenDollar" id="graphNum">89,000 total</span>
                     <div class="flexCol" >
                       <div class="dateDropDown" >
                         <img src="./imgs/percentArrowUp.svg">
-                        <span id="greenText">50%</span>
+                        <span id="greenText" >50%</span>
                       </div>
-                      <span class="dateDropDown">vs. Feb 9-Feb 16</span>
+                      <span class="dateDropDown" id="graphDate">vs. Feb 9-Feb 16</span>
                     </div>
                   </div>
                 </div>
@@ -241,12 +245,133 @@
 
           </div>
 
+          <div class="reclaimAlign" id="marginBottom">
+            <img src="./imgs/reclaim1.svg">
+            <span id="subheadingTitle">RECLAIM</span>
+            <img src="./imgs/reclaim2.svg">
+            <img src="./imgs/reclaim3.svg" class="reclaimLine">
+
+
+          </div>
           
+          <div class="chartBackground" >
+            <div class="innerChartMargin">
+              <div>
+                <span id="graphTitle">Reclaim Cumulative Revenue</span>
+                <span id="greenBig">$13,555</span>
+               
+              </div>
+             
+              <img src="./imgs/fakeChart.svg" class="scaleImg" >
+            </div>
+          </div>
+
+          <div class="spacedRow" id="gapMargin">
+
+            <div class="flexCol" >
+              <div class="flexRow" id="marginBottom">
+                <img src="./imgs/cartVector.svg">
+                <span class ='cartMargin' id="subheadingTitle">Add to Cart Flow</span>
+                <img src="./imgs/reclaim2.svg">
+              </div>
+
+              <div class="flexCol" id="marginBottom">
+                
+                <div class="flexRow">
+                  <div id="viewFlow">
+                    <span>REVENUE</span>
+                    <span id="greenBig">$13,555</span>
+                  </div>
+                  <div id="viewFlow">
+                    <span>FLOW EVENTS:</span>
+                    <span">15,500</span>
+                  </div>
+                </div>
+
+                <div class="flexRow" >
+                  <div id="viewFlow">
+                    <span>ORDERS:</span>
+                    <span >43</span>
+                  </div>
+                  <div id="viewFlow">
+                    <span>AVERAGE ORDER VALUE:</span>
+                    <span >$116.15</span>
+                  </div>
+                </div>
+                
+               
+              </div>
+
+              <div id="marginBottom">
+                <img src="./imgs/addToCart.png" class="scaleImg"  >
+              </div>
+            
+              
+            </div>
+  
+            <div class="flexCol">
+              <div class="flexRow" id="marginBottom">
+                <img src="./imgs/productVector.svg">
+                <span class ='cartMargin'  id="subheadingTitle">Product View Flow</span>
+                <img src="./imgs/reclaim2.svg">
+              </div>
+              <div class="flexCol" id="marginBottom">
+                
+                <div class="flexRow" >
+                  <div id="viewFlow">
+                    <span>REVENUE</span>
+                    <span id="greenBig">$13,222</span>
+                  </div>
+                  <div id="viewFlow">
+                    <span>FLOW EVENTS:</span>
+                    <span">11,333</span>
+                  </div>
+                </div>
+                <div class="flexRow" >
+                  <div id="viewFlow">
+                    <span>ORDERS:</span>
+                    <span >22</span>
+                  </div>
+                  <div id="viewFlow">
+                    <span>AVERAGE ORDER VALUE:</span>
+                    <span >$99.99</span>
+                  </div>
+                </div>
+                
+              </div>
+              <div id="marginBottom">
+                <img src="./imgs/addToCart.png" class="scaleImg">
+              </div>
+            </div>
+          </div>
+
+          <div class="reclaimAlign" id="marginBottom">
+            <img src="./imgs/reclaim1.svg">
+            <span id="subheadingTitle">RESOLVE</span>
+            <img src="./imgs/reclaim2.svg">
+            <img src="./imgs/reclaim3.svg" class="reclaimLine">
+
+
+          </div>
+          
+          <div class="chartBackground" >
+            <div class="innerChartMargin">
+              <div>
+                <span id="graphTitle">Resolve Cumulative Revenue</span>
+                <span id="greenBig">$13,555</span>
+               
+              </div>
+             
+              <img src="./imgs/fakeChart.svg" class="scaleImg">
+            </div>
+          </div>
 
         </div>
+      
+      
       </main>
+      
 
-  
     
   </body>
 
