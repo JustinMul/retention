@@ -8,6 +8,16 @@ body{
   
 }
 
+button{
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
 /* nav Bar css  */
 
 nav{
@@ -238,6 +248,12 @@ height: 100%;
   border: 0.5px solid black;  
   margin-bottom: 20px;
 }
+
+.chartBackground:hover{
+  scale: 105%;
+  box-shadow: 10px 10px 5px #696969;
+}
+
 
 .flexRowChart{
   margin-top: 20px;
