@@ -17,8 +17,13 @@
             <img class = "logo" src="./imgs/Retention-Logo-Full-Black.svg">
             
             <script>
-              function dropDown() {
-                alert("Hello World!");
+              function dropDown(id) {
+                let dropdown = document.getElementById(id);
+                if (dropdown.style.display === "flex") {
+                  dropdown.style.display = "none";
+                } else {
+                  dropdown.style.display = "flex";
+                }
               }
             </script>
 
@@ -30,7 +35,7 @@
               <img src="./imgs/VectorDown.svg" class="rightIcon">
             </button >
 
-            <button class="buttonContainer" id="activeButton">
+            <button class="buttonContainer" onclick="dropDown('subDashboard')">
               <div class="leftIcon">
                 <img src="./imgs/DashboardIcon.svg" >
               </div>
@@ -38,7 +43,7 @@
               <img src="./imgs/vectorUpActive.svg" class="rightIcon" >
             </button>
 
-            <div class="buttonContainer">
+            <div class="buttonContainer" id="subDashboard">
               <div class="leftIcon">
               </div>
               <span class="trends">TRENDS</span>
@@ -60,7 +65,7 @@
               <span class="admin">SUPRESSION LISTS</span>
             </button>
 
-            <button class="buttonContainer">
+            <button class="buttonContainer" onclick="dropDown('subResolve')">
               <div class="leftIcon">
                 <img src="./imgs/adminIcon.svg">
               </div>
@@ -69,25 +74,28 @@
               <img src="./imgs/VectorUp.svg" class="rightIcon">
             </button>
             
-            <div class="buttonContainer">
-              <div class="leftIcon">
+            <div id="subResolve" class="flexCol">
+              <div class="buttonContainer" >
+                <div class="leftIcon">
+                </div>
+                <span class="trends">INTEGRATIONS</span>
               </div>
-              <span class="trends">INTEGRATIONS</span>
-            </div>
-
-            <div class="buttonContainer">
-              <div class="leftIcon">
+  
+              <div class="buttonContainer" >
+                <div class="leftIcon">
+                </div>
+                <span class="trends">CONTACTS</span>
               </div>
-              <span class="trends">CONTACTS</span>
-            </div>
-
-            <div class="buttonContainer">
-              <div class="leftIcon">
+  
+              <div class="buttonContainer" >
+                <div class="leftIcon">
+                </div>
+                <span class="trends">ORDERS</span>
               </div>
-              <span class="trends">ORDERS</span>
             </div>
+           
 
-            <button class="buttonContainer">
+            <button class="buttonContainer" onclick="dropDown('subReclaim')">
               <div class="leftIcon">
                 <img src="./imgs/reclaimIcon.svg">
               </div>
@@ -96,13 +104,13 @@
               <img src="./imgs/VectorUp.svg" class="rightIcon">
             </button>
 
-            <div class="buttonContainer">
+            <div class="buttonContainer" id="subReclaim">
               <div class="leftIcon">
               </div>
               <span class="trends">EVENT DETAILS</span>
             </div>
 
-            <button class="buttonContainer">
+            <button class="buttonContainer" onclick="dropDown('subReactivate')">
               <div class="leftIcon">
                 <img src="./imgs/reactivateIcon.svg">
               </div>
@@ -111,7 +119,7 @@
               <img src="./imgs/VectorUp.svg" class="rightIcon">
             </button>
 
-            <div class="buttonContainer">
+            <div class="buttonContainer" id="subReactivate">
               <div class="leftIcon">
               </div>
               <span class="trends">UPLOAD DATA</span>
