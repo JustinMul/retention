@@ -238,8 +238,11 @@ height: 100%;
 
 .dateDropDown{
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  align-items: flex-end;
+  position: relative;
 
 }
 .dateBackground{
@@ -252,8 +255,19 @@ height: 100%;
   gap: 15px;
   padding-left:12px;
   padding-right: 12px;
+
 }
 
+.dateDropdownContent {
+
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  background-color:  #FFFFFF;
+  border: 0.5px solid black;  
+  display: none;
+  top: 100%;
+}
 .smallGraph{
   max-width: 100%;
   height: auto;
@@ -389,6 +403,9 @@ height: 100%;
  
 }
 
+.viewTitle{
+  margin-right: 12px;
+}
 .scaleImg{
   max-width: 100%;
   height: auto;
@@ -399,6 +416,7 @@ height: 100%;
 }
 
 .reclaimAlign{
+  position: relative;
   display: flex;
   gap:10px;
   align-items: center;
@@ -445,4 +463,32 @@ height: 100%;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+.revenue{
+  text-decoration: underline;
+  color: #008F46;
+}
+
+.orders{
+  text-decoration: underline;
+  color: #EB440F;
+}
+
+.flowCol{
+display: flex;
+flex-direction: column;
+flex: 1;
+}
+
+.popUp{
+  display: none;
+  position: absolute;
+  top: 100%;
+ 
+  background-color: black;
+  color: white;
+}
+.infoButton:hover ~ .popUp{
+  display: block;
 }

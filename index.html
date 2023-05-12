@@ -5,10 +5,58 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Prompt:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   </head>
+
+  <script>
+    function dropDown(parent, id,rightIcon, section) {
+ 
+      let main = document.getElementById(parent)
+      let dropdown = document.getElementById(id);
+      let right = document.getElementById(rightIcon)
+
+      if (section === 'nav') {
+        if (dropdown.style.display === "flex") {
+        right.src='./imgs/vectorUp.svg'
+        dropdown.style.display = "none";
+
+        } else {
+          dropdown.style.display = "flex";
+          right.src='./imgs/vectorDownActive.svg'
+        }
+      }
+
+      if (section === 'date') {
+        if (dropdown.style.display === "flex") {
+        right.src='./imgs/vectorUpActive.svg'
+        dropdown.style.display = "none";
+
+        } else {
+          dropdown.style.display = "flex";
+          right.src='./imgs/vectorDownActive.svg'
+        }
+      }
+   
+    
+      if(section==='main'){
+        if (dropdown.style.display === "none") {
+          right.src='./imgs/vectorDownActive.svg'
+          dropdown.style.display = "flex";
+
+        } else {
+          dropdown.style.display = "none";
+          right.src='./imgs/vectorUpActive.svg'
+        }
+      }
+      
+
+    }
+
+
+  </script>
+
 
   <body>
       <nav>
@@ -16,42 +64,7 @@
           <div class="navButtons">
             <img class = "logo" src="./imgs/Retention-Logo-Full-Black.svg">
             
-            <script>
-              function dropDown(parent, id,rightIcon, section) {
-           
-                let main = document.getElementById(parent)
-                let dropdown = document.getElementById(id);
-                let right = document.getElementById(rightIcon)
-
-                if (section === 'nav') {
-                  if (dropdown.style.display === "flex") {
-                  right.src='./imgs/vectorUp.svg'
-                  dropdown.style.display = "none";
-
-                  } else {
-                    dropdown.style.display = "flex";
-                    right.src='./imgs/vectorUpActive.svg'
-                  }
-                }
-                console.log(dropdown.style.display)
-              
-                if(section==='main'){
-                  if (dropdown.style.display === "none") {
-                    right.src='./imgs/vectorDownActive.svg'
-                    dropdown.style.display = "flex";
-
-                  } else {
-                    dropdown.style.display = "none";
-                    right.src='./imgs/vectorUpActive.svg'
-                  }
-                }
-                
-
-              }
-
-
-            </script>
-
+            
             <button class="buttonContainer" >
               <div class="leftIcon">
                 <img src="./imgs/adminIcon.svg" >
@@ -208,10 +221,17 @@
 
           
           <div class="dateDropDown">
-            <div class="dateBackground">
-              <img src="./imgs/calendar.svg">
-              <span id="dateDrop">February 16 - February 22</span>
-              <img src="./imgs/VectorDownActive.svg">
+            <div class="flowCol">
+              <button class="dateBackground" onclick="dropDown('', 'dateValues','dateRight', 'date' )">
+                <img src="./imgs/calendar.svg">
+                <span id="dateDrop">Feburary 16 - Feburary 22</span>
+                <img src="./imgs/VectorDownActive.svg" id="dateRight">
+              </button>
+              <div class="dateDropdownContent" id="dateValues">
+                <button id="dateDrop">Feburary 16 - Feburary 22</button>
+                <button id="dateDrop">Feburary 16 - Feburary 22</button>
+                <button id="dateDrop">Feburary 16 - Feburary 22</button>
+              </div>
             </div>
           </div>
           
@@ -287,11 +307,13 @@
           <div class="reclaimAlign" id="marginBottom">
             <img src="./imgs/reclaim1.svg">
             <span id="subheadingTitle">RECLAIM</span>
-            <img src="./imgs/reclaim2.svg">
+            <img src="./imgs/reclaim2.svg" class="infoButton">
+            <div class="popUp"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget pretium velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut a dignissim libero. Cras congue pulvinar diam gravida vehicula. In ac tellus urna. Quisque non turpis vel sapien tincidunt lacinia vitae non leo. Maecenas aliquet ligula id purus tincidunt, ac aliquet arcu placerat.</div>
             <img src="./imgs/reclaim3.svg" class="reclaimLine">
-
-
+            
+       
           </div>
+          
           
           <div class="chartBackground" >
             <div class="innerChartMargin">
@@ -307,20 +329,24 @@
             </div>
           </div>
 
-          <div class="spacedRow" id="gapMargin">
+    
 
-            <div class="flexCol" >
+          
+          <div class="flexRow" id="gapMargin">
+
+            <div class="flowCol" >
               <div class="flexRow" id="marginBottom">
                 <img src="./imgs/cartVector.svg">
                 <span class ='cartMargin' id="subheadingTitle">Add to Cart Flow</span>
-                <img src="./imgs/reclaim2.svg">
+                <img src="./imgs/reclaim2.svg" class="infoButton">
+            <div class="popUp"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget pretium velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut a dignissim libero. Cras congue pulvinar diam gravida vehicula. In ac tellus urna. Quisque non turpis vel sapien tincidunt lacinia vitae non leo. Maecenas aliquet ligula id purus tincidunt, ac aliquet arcu placerat.</div>
               </div>
 
               <div class="flexCol" id="marginBottom">
                 
                 <div class="flexRow">
                   <div id="viewFlow">
-                    <span>REVENUE</span>
+                    <span class="viewTitle">REVENUE</span>
                     <span id="greenBig">$13,555</span>
                   </div>
                   <div id="viewFlow">
@@ -343,24 +369,40 @@
                
               </div>
 
-              <div id="marginBottom">
-                <img src="./imgs/addToCart.png" class="scaleImg"  >
+              <div class="chartBackground" >
+                <div class="innerChartMargin">
+                  <button class="collapseTitle" onclick="dropDown('', 'addToCartChart', 'addToCartRight', 'main')">
+                    <div >
+                      <span id="graphTitle">Add to Cart</span>
+                     
+                    </div>
+                    <div>
+                      <span class="revenue">• Revenue</span>
+                      <span class="orders">• Orders</span>
+                      <img src="./imgs/VectorUpActive.svg" id="addToCartRight">
+                    </div>
+                    
+                </button>
+                 
+                  <img src="./imgs/fakeChart.svg" class="scaleImg" id="addToCartChart" >
+                </div>
               </div>
             
               
             </div>
   
-            <div class="flexCol">
+            <div class="flowCol">
               <div class="flexRow" id="marginBottom">
                 <img src="./imgs/productVector.svg">
                 <span class ='cartMargin'  id="subheadingTitle">Product View Flow</span>
-                <img src="./imgs/reclaim2.svg">
+                <img src="./imgs/reclaim2.svg" class="infoButton">
+                <div class="popUp"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget pretium velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut a dignissim libero. Cras congue pulvinar diam gravida vehicula. In ac tellus urna. Quisque non turpis vel sapien tincidunt lacinia vitae non leo. Maecenas aliquet ligula id purus tincidunt, ac aliquet arcu placerat.</div>
               </div>
               <div class="flexCol" id="marginBottom">
                 
                 <div class="flexRow" >
                   <div id="viewFlow">
-                    <span>REVENUE</span>
+                    <span class="viewTitle">REVENUE</span>
                     <span id="greenBig">$13,222</span>
                   </div>
                   <div id="viewFlow">
@@ -380,16 +422,34 @@
                 </div>
                 
               </div>
-              <div id="marginBottom">
-                <img src="./imgs/addToCart.png" class="scaleImg">
+              <div class="chartBackground" >
+                <div class="innerChartMargin">
+                  <button class="collapseTitle" onclick="dropDown('', 'productChart', 'productRight', 'main')">
+                    <div >
+                      <span id="graphTitle">Product View</span>
+                    </div>
+                    
+                    <div>
+                      <span class="revenue">• Revenue</span>
+                      <span class="orders">• Orders</span>
+                      <img src="./imgs/VectorUpActive.svg" id="productRight">
+                    </div>
+                   
+                </button>
+                 
+                  <img src="./imgs/fakeChart.svg" class="scaleImg" id="productChart" >
+                </div>
               </div>
             </div>
           </div>
 
+
+
           <div class="reclaimAlign" id="marginBottom">
             <img src="./imgs/reclaim1.svg">
             <span id="subheadingTitle">RESOLVE</span>
-            <img src="./imgs/reclaim2.svg">
+            <img src="./imgs/reclaim2.svg" class="infoButton">
+            <div class="popUp"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget pretium velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut a dignissim libero. Cras congue pulvinar diam gravida vehicula. In ac tellus urna. Quisque non turpis vel sapien tincidunt lacinia vitae non leo. Maecenas aliquet ligula id purus tincidunt, ac aliquet arcu placerat.</div>
             <img src="./imgs/reclaim3.svg" class="reclaimLine">
 
 
