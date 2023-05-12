@@ -17,30 +17,55 @@
             <img class = "logo" src="./imgs/Retention-Logo-Full-Black.svg">
             
             <script>
-              function dropDown(id) {
+              function dropDown(parent, id,rightIcon, section) {
+           
+                let main = document.getElementById(parent)
                 let dropdown = document.getElementById(id);
-                if (dropdown.style.display === "flex") {
+                let right = document.getElementById(rightIcon)
+
+                if (section === 'nav') {
+                  if (dropdown.style.display === "flex") {
+                  right.src='./imgs/vectorUp.svg'
                   dropdown.style.display = "none";
-                } else {
-                  dropdown.style.display = "flex";
+
+                  } else {
+                    dropdown.style.display = "flex";
+                    right.src='./imgs/vectorUpActive.svg'
+                  }
                 }
+                console.log(dropdown.style.display)
+              
+                if(section==='main'){
+                  if (dropdown.style.display === "none") {
+                    right.src='./imgs/vectorDownActive.svg'
+                    dropdown.style.display = "flex";
+
+                  } else {
+                    dropdown.style.display = "none";
+                    right.src='./imgs/vectorUpActive.svg'
+                  }
+                }
+                
+
               }
+
+
             </script>
 
-            <button class="buttonContainer" onclick="dropDown()">
+            <button class="buttonContainer" >
               <div class="leftIcon">
                 <img src="./imgs/adminIcon.svg" >
               </div>
               <span class="admin">ADMIN</span>
-              <img src="./imgs/VectorDown.svg" class="rightIcon">
+              <img src="./imgs/VectorDown.svg" class="rightIcon" id="adminRight">
             </button >
 
-            <button class="buttonContainer" onclick="dropDown('subDashboard')">
+            <button class="buttonContainer" id= 'dashboard' onclick="dropDown('dashboard','subDashboard', 'dashRight', 'nav')">
               <div class="leftIcon">
                 <img src="./imgs/DashboardIcon.svg" >
               </div>
-              <span class="admin" id="activeButton">DASHBOARD</span>
-              <img src="./imgs/vectorUpActive.svg" class="rightIcon" >
+              <span class="admin">DASHBOARD</span>
+              <img src="./imgs/vectorUp.svg" class="rightIcon" id="dashRight" >
             </button>
 
             <div class="buttonContainer" id="subDashboard">
@@ -65,13 +90,13 @@
               <span class="admin">SUPRESSION LISTS</span>
             </button>
 
-            <button class="buttonContainer" onclick="dropDown('subResolve')">
+            <button class="buttonContainer" onclick="dropDown('resolve', 'subResolve', 'resRight' , 'nav')">
               <div class="leftIcon">
                 <img src="./imgs/adminIcon.svg">
               </div>
               
               <span class="admin">RESOLVE</span>
-              <img src="./imgs/VectorUp.svg" class="rightIcon">
+              <img src="./imgs/VectorUp.svg" class="rightIcon" id="resRight">
             </button>
             
             <div id="subResolve" class="flexCol">
@@ -95,13 +120,13 @@
             </div>
            
 
-            <button class="buttonContainer" onclick="dropDown('subReclaim')">
+            <button class="buttonContainer" onclick="dropDown('reclaim', 'subReclaim', 'reclaimRight' , 'nav')">
               <div class="leftIcon">
                 <img src="./imgs/reclaimIcon.svg">
               </div>
             
               <span class="admin">RECLAIM</span>
-              <img src="./imgs/VectorUp.svg" class="rightIcon">
+              <img src="./imgs/VectorUp.svg" class="rightIcon" id="reclaimRight">
             </button>
 
             <div class="buttonContainer" id="subReclaim">
@@ -110,13 +135,13 @@
               <span class="trends">EVENT DETAILS</span>
             </div>
 
-            <button class="buttonContainer" onclick="dropDown('subReactivate')">
+            <button class="buttonContainer" onclick="dropDown('reactivate', 'subReactivate','reactivateRight', 'nav')">
               <div class="leftIcon">
                 <img src="./imgs/reactivateIcon.svg">
               </div>
              
               <span class="admin">REACTIVATE</span>
-              <img src="./imgs/VectorUp.svg" class="rightIcon">
+              <img src="./imgs/VectorUp.svg" class="rightIcon" id="reactivateRight">
             </button>
 
             <div class="buttonContainer" id="subReactivate">
@@ -185,7 +210,7 @@
           <div class="dateDropDown">
             <div class="dateBackground">
               <img src="./imgs/calendar.svg">
-              <span id="dateDrop">February 16-February 22</span>
+              <span id="dateDrop">February 16 - February 22</span>
               <img src="./imgs/VectorDownActive.svg">
             </div>
           </div>
@@ -270,13 +295,15 @@
           
           <div class="chartBackground" >
             <div class="innerChartMargin">
-              <div>
-                <span id="graphTitle">Reclaim Cumulative Revenue</span>
-                <span id="greenBig">$13,555</span>
-               
-              </div>
+              <button class="collapseTitle" onclick="dropDown('', 'reclaimChart', 'bigReclaimRight', 'main')">
+                <div >
+                  <span id="graphTitle">Reclaim Cumulative Revenue</span>
+                  <span id="greenBig">$13,555</span>
+                </div>
+                <img src="./imgs/VectorUpActive.svg" id="bigReclaimRight">
+            </button>
              
-              <img src="./imgs/fakeChart.svg" class="scaleImg" >
+              <img src="./imgs/fakeChart.svg" class="scaleImg" id="reclaimChart" >
             </div>
           </div>
 
@@ -370,13 +397,15 @@
           
           <div class="chartBackground" >
             <div class="innerChartMargin">
-              <div>
-                <span id="graphTitle">Resolve Cumulative Revenue</span>
-                <span id="greenBig">$13,555</span>
-               
-              </div>
+              <button class="collapseTitle" onclick="dropDown('', 'resolveChart', 'bigResolveRight', 'main')">
+                <div>
+                  <span id="graphTitle">Resolve Cumulative Revenue</span>
+                  <span id="greenBig">$13,555</span>
+                </div>
+                <img src="./imgs/VectorUpActive.svg" id="bigResolveRight">
+              </button>
              
-              <img src="./imgs/fakeChart.svg" class="scaleImg">
+              <img src="./imgs/fakeChart.svg" class="scaleImg" id="resolveChart" >
             </div>
           </div>
 

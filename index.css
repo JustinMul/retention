@@ -60,7 +60,7 @@ nav{
 }
 
 .buttonContainer:hover{
-  scale: 105%;
+  scale: 101%;
 }
 
 .buttonContainer:focus{
@@ -83,6 +83,8 @@ nav{
   margin-left: auto;
   margin-right: 1rem;
 }
+
+
 .admin{
   font-family: 'Commuters Sans';
   font-style: normal;
@@ -237,10 +239,7 @@ height: 100%;
 .dateDropDown{
   display: flex;
   justify-content: flex-end;
-   
   align-items: center;
-  padding-left:17px;
-  padding-right: 17px;
 
 }
 .dateBackground{
@@ -251,6 +250,8 @@ height: 100%;
   display: flex;
   align-items: center;
   gap: 15px;
+  padding-left:12px;
+  padding-right: 12px;
 }
 
 .smallGraph{
@@ -428,4 +429,20 @@ height: 100%;
 
 #subReactivate{
   display: none;
+}
+
+#reclaimChart{
+  display: flex;
+}
+
+#resolveChart{
+  display: flex;
+}
+
+.collapseTitle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
