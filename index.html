@@ -54,6 +54,19 @@
 
     }
 
+    function toggleStatus(){
+      let scriptStatusText = document.getElementById("scriptStatusText");
+      let onText = document.getElementById("onText");
+      console.log(onText.style.backgroundColor)
+      // Toggle background colors
+      if (scriptStatusText.style.backgroundColor === "") {
+        scriptStatusText.style.backgroundColor = "#D3FE8A";
+        onText.style.backgroundColor = "white";
+      } else {
+        scriptStatusText.style.backgroundColor = "";
+        onText.style.backgroundColor = "";
+      }
+        }
 
   </script>
 
@@ -184,9 +197,9 @@
 
           
           </div>
-          <div class="myAccount">
+          <button class="myAccount">
             <span class="myAccountText">MY ACCOUNT </span>
-          </div>
+          </button>
         </div>
       </nav>
 
@@ -200,15 +213,15 @@
 
               <div class="flexRowMargin" id="topBar" >
                 <span id="scriptStatus">SCRIPT STATUS</span>
-                <div class="flexRowMargin" id="offOn">
-                  <span class="baseMargin" id="scriptStatus">OFF</span>
+                <button class="flexRowMargin" id="offOn" onclick="toggleStatus()">
+                  <span class="baseMargin" id="scriptStatusText">OFF</span>
                   <div id="offOn">
-                    <div class="rectangle189">
-                      <span class="baseMargin" id="on">ON</span>
+                    <div class="rectangle189" id="onText">
+                      <span class="baseMargin"  id="scriptStatusText">ON</span>
                       <img src="./imgs/checkmarkVector.svg">
                     </div>
                   </div>
-                </div>
+                </button>
               </div>
 
               <div class="flexRowMargin">

@@ -199,16 +199,26 @@ height: 100%;
   text-transform: uppercase;
 }
 
+#scriptStatusText{
+  font-family: 'Commuters Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
 #topbar{
   margin-left: 10px;
 }
 .rectangle189{
-  background-color: #D3FE8A;
-  scale: 90%;
   display: flex;
   align-items: center;
 }
 
+#onText{
+  background-color: #D3FE8A;
+}
 #offOn{
   background-color: #FFFFFF;
   padding: 1px;
@@ -230,7 +240,7 @@ height: 100%;
 }
 
 #calendarImg{
-  max-width: 40%;
+  max-width: 2rem;
   height: auto;
 
 }
@@ -474,11 +484,13 @@ height: 100%;
 }
 
 .revenue{
+  margin-right: 1rem;
   text-decoration: underline;
   color: #008F46;
 }
 
 .orders{
+  margin-right: 1rem;
   text-decoration: underline;
   color: #EB440F;
 }
