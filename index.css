@@ -68,10 +68,6 @@ nav{
   background: #ECE7E1;
 }
 
-/* #activeButton{
-  background: #ECE7E1;
-  color: black;
-} */
 
 
 .leftIcon{
@@ -82,7 +78,10 @@ nav{
 .rightIcon{
   margin-left: auto;
   margin-right: 1rem;
+
 }
+
+
 
 
 .admin{
@@ -98,6 +97,14 @@ nav{
 
 .buttonContainer:focus>.admin{
   color: #000000;
+}
+
+.buttonContainer:focus>.rightIcon{
+    filter: brightness(0);
+}
+
+.buttonContainer:focus>.leftIcon{
+  filter: brightness(0);
 }
 
 .trends{
@@ -267,6 +274,7 @@ height: 100%;
   border: 0.5px solid black;  
   display: none;
   top: 100%;
+
 }
 .smallGraph{
   max-width: 100%;
@@ -491,4 +499,25 @@ flex: 1;
 }
 .infoButton:hover ~ .popUp{
   display: block;
+}
+
+.flowFlexRow{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.flexRowView{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .flexRowView{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+  }
 }
